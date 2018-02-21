@@ -13,13 +13,15 @@
   - If you do something stupid it will crash
 
 ### Important!!!
+You need to have the latest Version of .Net!
+
 It will only work if the programm can find two similar images.
 
 How it works:
-'''ssh
+```ssh
 YourTag_TextureName_co.type
 YourTag_TextureName_nopx.type
-'''
+```
 
 It doesn't matter what file type you are using but YourTag_TextureName needs to be the same in order for the programm to match your textures!
 
