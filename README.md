@@ -11,7 +11,18 @@
   - Generate a custom config yet
   - It's only working for ground textures
   - If you do something stupid it will crash
-  
+
+### Important!!!
+It will only work if the programm can find two similar images.
+
+How it works:
+'''ssh
+YourTag_TextureName_co.type
+YourTag_TextureName_nopx.type
+'''
+
+It doesn't matter what file type you are using but YourTag_TextureName needs to be the same in order for the programm to match your textures!
+
 ### How to use it
 First put the executable in the folder where you want to create your rvmats
 ### Console
@@ -20,7 +31,7 @@ After the scan is succesfull you can type 'generate' to generate your rvmats
 
 Type 'exit' or 'close' to exit the programm.
 
-###Argument using
+### Argument using
 
 | Argument | What it does |
 | ------   | ------       |
