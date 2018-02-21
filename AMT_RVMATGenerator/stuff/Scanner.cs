@@ -2,11 +2,8 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Mime;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace AMT_RVMATGenerator.src
+namespace AMT_RVMATGenerator.stuff
 {
     class Scanner
     {
@@ -14,7 +11,7 @@ namespace AMT_RVMATGenerator.src
 
         public Scanner()
         {
-            RvmatList = new List<RVMAT>();    
+            RvmatList = new List<RVMAT>();
         }
 
 
