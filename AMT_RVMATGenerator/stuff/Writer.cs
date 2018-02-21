@@ -27,8 +27,8 @@ namespace AMT_RVMATGenerator.src
                     writer.WriteLine();
 
                     writer.WriteLine("#define _ARMA_");
-                    writer.WriteLine("ambient[] = {1.5,1.5,1.5,1};");
-                    writer.WriteLine("diffuse[] = {0.5,0.5,0.5,1};");
+                    writer.WriteLine("ambient[] = {1.0,1.0,1.0,1};");
+                    writer.WriteLine("diffuse[] = {1.0,1.0,1.0,1};");
                     writer.WriteLine("forcedDiffuse[] = {0,0,0,0};");
                     writer.WriteLine("specular[] = {0,0,0,0};");
                     writer.WriteLine("specularPower = 1;");
@@ -41,9 +41,9 @@ namespace AMT_RVMATGenerator.src
                     writer.WriteLine("\tuvSource = \"tex\";");
                     writer.WriteLine("\tclass uvTransform");
                     writer.WriteLine("\t{");
-                    writer.WriteLine("\t\taside[] = {10,0,0};");
-                    writer.WriteLine("\t\tup[] = {0,10,0};");
-                    writer.WriteLine("\t\tdir[] = {0,0,10}");
+                    writer.WriteLine("\t\taside[] = {5,0,0};");
+                    writer.WriteLine("\t\tup[] = {0,5,0};");
+                    writer.WriteLine("\t\tdir[] = {0,0,5}");
                     writer.WriteLine("\t\tpos[] = {0,0,0");
                     writer.WriteLine("\t};");
                     writer.WriteLine("};");
@@ -54,9 +54,9 @@ namespace AMT_RVMATGenerator.src
                     writer.WriteLine("\tuvSource = \"tex\";");
                     writer.WriteLine("\tclass uvTransform");
                     writer.WriteLine("\t{");
-                    writer.WriteLine("\t\taside[] = {10,0,0};");
-                    writer.WriteLine("\t\tup[] = {0,10,0};");
-                    writer.WriteLine("\t\tdir[] = {0,0,10}");
+                    writer.WriteLine("\t\taside[] = {5,0,0};");
+                    writer.WriteLine("\t\tup[] = {0,5,0};");
+                    writer.WriteLine("\t\tdir[] = {0,0,5}");
                     writer.WriteLine("\t\tpos[] = {0,0,0");
                     writer.WriteLine("\t};");
                     writer.WriteLine("};");
