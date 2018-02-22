@@ -303,6 +303,7 @@ namespace AMT_RVMATGenerator
                 rvmatSettings.up = "{0,5,0}";
                 rvmatSettings.dir = "{0,0,5}";
                 rvmatSettings.pos = "{0,0,0}";
+                Save(rvmatSettings);
             }
         }
 
