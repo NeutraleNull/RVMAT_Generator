@@ -59,67 +59,77 @@ namespace AMT_RVMATGenerator
 
                         case "edit":
                             Console.WriteLine("Choose from the following values");
-                            Console.WriteLine("\ambient\ndiffuse\nforced\nforcedDiffuse\nspecular\nspecularPower\nemmisive\naside\nup\ndir\npos\nYou can leave this menu by enter 'exit'");
+                            Console.WriteLine("\nambient\ndiffuse\nforced\nforcedDiffuse\nspecular\nspecularPower\nemmisive\naside\nup\ndir\npos\nYou can leave this menu by enter 'exit'\nReset the config by enter 'reset'");
                             Console.Write("> ");
                             while (true)
                             {
                                 switch (Console.ReadLine())
                                 {
                                     case "ambient":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.ambient);
                                         Console.WriteLine("Enter a value for ambient");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.ambient = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "diffuse":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.diffuse);
                                         Console.WriteLine("Enter a value for diffuse");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.diffuse = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "forcedDiffuse":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.forcedDiffuse);
                                         Console.WriteLine("Enter a value for forcedDiffuse");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.forcedDiffuse = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "specular":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.specular);
                                         Console.WriteLine("Enter a value for specular");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.specular = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "specularPower":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.specularPower);
                                         Console.WriteLine("Enter a value for specularPower");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.specularPower = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "emmisive":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.emmisive);
                                         Console.WriteLine("Enter a value for emmisive");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.emmisive = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "aside":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.aside);
                                         Console.WriteLine("Enter a value for aside");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.aside = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "up":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.up);
                                         Console.WriteLine("Enter a value for up");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.up = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "dir":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.dir);
                                         Console.WriteLine("Enter a value for dir");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.dir = Console.ReadLine();
                                         Properties.Data.Default.Save();
                                         break;
                                     case "pos":
+                                        Console.WriteLine("Current Value: {0}", Properties.Data.Default.Settings.pos);
                                         Console.WriteLine("Enter a value for pos");
                                         Console.Write("> ");
                                         Properties.Data.Default.Settings.pos = Console.ReadLine();
@@ -127,6 +137,11 @@ namespace AMT_RVMATGenerator
                                         break;
                                     case "exit":
                                         return;
+                                    case "reset":
+                                        var temp = new RVMATSettings();
+                                        Init(ref temp);
+                                        Console.WriteLine("Settings reseted!");
+                                        break;
                                     default:
                                         Console.WriteLine("Command not found, try again");
                                         break;
