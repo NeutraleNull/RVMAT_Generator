@@ -138,10 +138,15 @@ namespace AMT_RVMATGenerator
                                     case "exit":
                                         return;
                                     case "reset":
-                                        var temp = new RVMATSettings();
-                                        Init(ref temp);
+                                        Reset();
                                         Console.WriteLine("Settings reseted!");
                                         break;
+#if DEBUG
+                                    case "DEBUG":
+                                        Console.WriteLine(Properties.Data.Default.Settings.specular);
+                                        Console.WriteLine(Properties.Data.Default.Settings.pos);
+                                        break;
+#endif
                                     default:
                                         Console.WriteLine("Command not found, try again");
                                         break;
@@ -198,6 +203,8 @@ namespace AMT_RVMATGenerator
             }
             if (args.Length > 1)
             {
+                Reset();
+
                 var generate = false;
                 string folder = "";
 
@@ -287,7 +294,7 @@ namespace AMT_RVMATGenerator
 
         private static void Init(ref RVMATSettings rvmatSettings)
         {
-            if (Properties.Data.Default.Settings != null)
+            if (Properties.Data.Default.Settings != null && Properties.Data.Default.Settings.specular != null)
             {
                 rvmatSettings = Properties.Data.Default.Settings;
             }
@@ -305,6 +312,24 @@ namespace AMT_RVMATGenerator
                 rvmatSettings.pos = "{0,0,0}";
                 Save(rvmatSettings);
             }
+        }
+
+        private static void Reset()
+        {
+            var rvmatSettings = new RVMATSettings
+            {
+                ambient = "{1.0,1.0,1.0,1}",
+                diffuse = "{1.0,1.0,1.0,1}",
+                forcedDiffuse = "{0,0,0,0}",
+                specular = "{0,0,0,0}",
+                specularPower = "1",
+                emmisive = "{0,0,0,0}",
+                aside = "{5,0,0}",
+                up = "{0,5,0}",
+                dir = "{0,0,5}",
+                pos = "{0,0,0}"
+            };
+            Save(rvmatSettings);
         }
 
         private static void Save(RVMATSettings rvmatSettings)
