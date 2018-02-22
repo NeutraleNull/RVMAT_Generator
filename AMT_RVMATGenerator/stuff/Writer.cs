@@ -54,10 +54,10 @@ namespace AMT_RVMATGenerator.stuff
                     writer.WriteLine("\tuvSource = \"tex\";");
                     writer.WriteLine("\tclass uvTransform");
                     writer.WriteLine("\t{");
-                    writer.WriteLine("\t\taside[] = {5,0,0};");
-                    writer.WriteLine("\t\tup[] = {0,5,0};");
-                    writer.WriteLine("\t\tdir[] = {0,0,5}");
-                    writer.WriteLine("\t\tpos[] = {0,0,0");
+                    writer.WriteLine("\t\taside[] = {0};", Properties.Data.Default.Settings.aside);
+                    writer.WriteLine("\t\tup[] = {0};", Properties.Data.Default.Settings.up);
+                    writer.WriteLine("\t\tdir[] = {0};", Properties.Data.Default.Settings.dir);
+                    writer.WriteLine("\t\tpos[] = {0};", Properties.Data.Default.Settings.pos);
                     writer.WriteLine("\t};");
                     writer.WriteLine("};");
                 }
